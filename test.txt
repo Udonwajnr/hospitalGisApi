@@ -1,0 +1,9 @@
+{
+  "name":"Town SHip hospital",
+  "location":{"type":"Point","coordinates":""},
+  "contact":{"phone":"08070628237","email":"udonwajnr10@gmail.com","address":{"street":"Ikot akpan abia"},"city":"Uyo","state":"Akwa Ibom","postalCode":"333424"},
+  "services":["othopedic","Eye clinic","Blood transmission"],
+  "description":"This is a hospital located in the West",
+  "operatingHours":{"monday":{"open":"8:00Am","close":"9:00pm"},"tuesday":{"open":"8:00Am","close":"9:00pm"},"wenesday":{"open":"8:00Am","close":"9:00pm"},"thursday":{"open":"8:00Am","close":"9:00pm"},"friday":{"open":"8:00Am","close":"9:00pm"},"saturday":{"open":"8:00Am","close":"9:00pm"},"sunday":{"open":"8:00Am","close":"9:00pm"}
+  }
+}

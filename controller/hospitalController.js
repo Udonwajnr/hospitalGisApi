@@ -13,7 +13,7 @@ const getHospital = asyncHandler(async(req,res)=>{
         return res.status(400).json({ message: 'Invalid Hospital ID format' });
       }
 
-    const hospital = await Hospital.find(id)
+    const hospital = await Hospital.findById(id)
     
     if (!hospital) {
         return res.status(404).json({ message: 'Hospital not found' });
@@ -27,7 +27,7 @@ const createHospital =asyncHandler(async(req,res)=>{
     res.status(201).json(savedHospital);
 })
 
-const updateHospital=asyncHandler(async()=>{
+const updateHospital=asyncHandler(async(req,res)=>{
     const { id } = req.params;
     // Validate the ObjectID
     if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -60,4 +60,5 @@ const deleteHospital=asyncHandler(async(req,res)=>{
     await Hospital.findByIdAndDelete(id)
     return res.status(200).json({msg:`${id} has been deleted`})
 })
+
 module.exports ={getAllHospitals,getHospital,getHospital,createHospital,updateHospital,deleteHospital }
