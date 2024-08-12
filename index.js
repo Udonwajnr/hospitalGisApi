@@ -5,7 +5,10 @@ const connectDb = require("./config/db")
 const color = require("colors")
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-const port =3000
+const port=3000
+
+app.use("/api/hospital",require("./route/hospitalRoute"))
+
 app.listen(port,()=>{
     console.log("I'm back")
 })
