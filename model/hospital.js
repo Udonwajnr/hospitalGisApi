@@ -45,6 +45,7 @@ const hospitalSchema =new mongoose.Schema({
             }
         }
     },
+    
     services:[
         {
             type:String,
