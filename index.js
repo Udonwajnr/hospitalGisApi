@@ -18,27 +18,5 @@ app.use("/api/hospital",require("./route/hospitalRoute"))
 app.listen(port,()=>{
     console.log("I'm back")
 })
-// const migrateAddPostalCode = async () => {
-//     try {
-//       // Connect to MongoDB
-//       await connectDB();
-  
-//       // Update documents
-//       const result = await Hospital.updateMany(
-//         {}, // Filter to match all documents
-//         { $set: { "contact.address.postalCode": "" } } // Add `postalCode` field with default value
-//       );
-  
-//       console.log('Update Result:', result);
-  
-//       // Close the connection after the migration
-//       mongoose.connection.close();
-//     } catch (error) {
-//       console.error('Error during migration:', error);
-//       mongoose.connection.close();
-//     }
-//   };
-  
-//   migrateAddPostalCode();
 
 connectDb()
